@@ -62,27 +62,16 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
 
 *Ejemplos de aplicación:*
   -**Clasificador de imágenes (CNN)**: Analizar imagenes de productos en una linea de producción para clasificarlos automáticamente.
-  
-  -**Segmentación semántica (CNN)**: Detector de tumores en scaneos cerebrales, cada pixel de la imagen es clasificado.
-  
-  -**Procesamiento de lenguaje natural (RNN, CNN, Transformers)**: Clasificador automático de nuevos artículos o clasificador de comentarios ofensivos.
-  
-  -**Summarization**: Rama del procesamiento de lenguaje natural para resumir textos.
-  
-  -**Chatbots**: Involucra muchos topicos de PLN incluyendo **entendimiento de lenguaje natural (NLU)** y modulos de pregunta/respuesta.
-  
-  -**Regresión**: Pronóstico de valores. Puedes utilizar métricas pasadas utilizando RNN, CNN o transformers.
-  
-  -**Reconocimiento de voz**: Procesa archivos de audio, es considerado complejo, se utilizan RNN, CNN o transformers.
-  
-  -**Detección de anomalías**: Detectar tarjetas de crédito fraudulentas.
-  
+  -**Segmentación semántica (CNN)**: Detector de tumores en scaneos cerebrales, cada pixel de la imagen es clasificado.  
+  -**Procesamiento de lenguaje natural (RNN, CNN, Transformers)**: Clasificador automático de nuevos artículos o clasificador de comentarios ofensivos.  
+  -**Summarization**: Rama del procesamiento de lenguaje natural para resumir textos.  
+  -**Chatbots**: Involucra muchos topicos de PLN incluyendo **entendimiento de lenguaje natural (NLU)** y modulos de pregunta/respuesta.  
+  -**Regresión**: Pronóstico de valores. Puedes utilizar métricas pasadas utilizando RNN, CNN o transformers.  
+  -**Reconocimiento de voz**: Procesa archivos de audio, es considerado complejo, se utilizan RNN, CNN o transformers.  
+  -**Detección de anomalías**: Detectar tarjetas de crédito fraudulentas.  
   -**Clustering**: Segmentar clientes basado en sus compras para crear distintas estrategias de marketing.
-
-  -**Reducción de dimensionalidad**: Representar datos de alta dimension y complejos en un diagrama evidente.
-  
-  -**Sistemas recomendadores**: Recomendar productos a clientes que podrían estar interesados basado en sus compras anteriores.
-  
+  -**Reducción de dimensionalidad**: Representar datos de alta dimension y complejos en un diagrama evidente.  
+  -**Sistemas recomendadores**: Recomendar productos a clientes que podrían estar interesados basado en sus compras anteriores.  
   -**Aprendizaje reforzado**: Hacer un bot inteligente para juegos. Modelo en donde el agente escoge maximizar las recompensas a través del tiempo dado un ambiente específico. **AlphaGo**
 
 *Tipos de Machine Learning*:
