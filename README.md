@@ -119,7 +119,18 @@ Algoritmos relacionados al aprendizaje no supervisado:
     Apriori
     Eclat
 
-**El libro presenta la recomendación de realizar reducción de dimensional al dataset ya sea supervisado o no, para así el programa se ejecute más rápido, utilizar menos memoria y, en algunos casos, mejora el funcionamiento**
+El libro recomienda aplicar reducción de dimensionalidad al dataset, ya sea de manera supervisada o no, para acelerar la ejecución del programa, reducir el uso de memoria y, en algunos casos, mejorar el rendimiento. **Sin embargo**, esto depende del contexto, ya que en ciertas situaciones podría ser más beneficioso aplicar técnicas de feature engineering. Es importante recordar que reducir la dimensionalidad puede ayudar a disminuir la correlación entre variables, pero también podría llevar a la pérdida de información relevante.
 
-    
+**Semisupervisado**: Cuando tienes algunos samples con label y otros no, por temas de economía. Algunos algoritmos pueden tratar con la falta de datos etiquetados. *(DBN y RBM)*
+
+**Reinforcement Learning**: El sistema de aprendizaje es un **agente**, el cual puede observar un **ambiente** específico, puede seleccionar o realizar **acciones** y recibe **rewards** como retorno o **penalties**. Por lo tanto, debe aprender por sí mismo cuál es la mejor estrategia para obtener la mejor recompensa en el tiempo. Una **política** establecerá cual acción el agente debería elegir cuando se le da una situación.
+
+*Pasos*:
+
+  - Observar.
+  - Seleccionar acción utilizando una política.
+  - Actuar.
+  - Obtener reward o penalty.
+  - Actualizar la política **(paso de aprendizaje)**.
+  - Iterar hasta que una política óptima a sido encontrada.
 
