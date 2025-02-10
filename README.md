@@ -61,7 +61,6 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
   - Para obtener conocimiento de problemas complejos y grandes cantidades de datos.
 
 *Ejemplos de aplicación:*
-
   -**Clasificador de imágenes (CNN)**: Analizar imagenes de productos en una linea de producción para clasificarlos automáticamente.
   -**Segmentación semántica (CNN)**: Detector de tumores en scaneos cerebrales, cada pixel de la imagen es clasificado.  
   -**Procesamiento de lenguaje natural (RNN, CNN, Transformers)**: Clasificador automático de nuevos artículos o clasificador de comentarios ofensivos.  
