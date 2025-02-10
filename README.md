@@ -4,9 +4,12 @@
 **Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow (2nd ed.). O'Reilly Media.**
 
 *Antecedente*:
-[Este articulo] (https://www.cs.toronto.edu/~hinton/absps/ncfast.pdf) fue un relevo que tuvo deep learning el 2006, debido a que los investigadores en los 90's habian desistido de estas técnicas.
-[Aquí puedes practicar los tópicos del libro] (https://github.com/ageron/handson-ml2)
-[Cursos de Deep Learning en Coursera] (https://www.coursera.org/learn/machine-learning/?isNewUser=true#testimonials)
+[Este articulo](https://www.cs.toronto.edu/~hinton/absps/ncfast.pdf) fue un relevo que tuvo deep learning el 2006, debido a que los investigadores en los 90's habian desistido de estas técnicas.
+
+[Aquí puedes practicar los tópicos del libro](https://github.com/ageron/handson-ml2)
+
+[Cursos de Deep Learning en Coursera](https://www.coursera.org/learn/machine-learning/?isNewUser=true#testimonials)
+
 [Documentación scikit-learn](https://scikit-learn.org/stable/user_guide.html) 
 
 
