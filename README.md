@@ -119,5 +119,7 @@ Algoritmos relacionados al aprendizaje no supervisado:
     Apriori
     Eclat
 
+**El libro presenta la recomendación de realizar reducción de dimensional al dataset ya sea supervisado o no, para así el programa se ejecute más rápido, utilizar menos memoria y, en algunos casos, mejora el funcionamiento**
+
     
 
