@@ -134,3 +134,12 @@ El libro recomienda aplicar reducción de dimensionalidad al dataset, ya sea de 
   - Actualizar la política **(paso de aprendizaje)**.
   - Iterar hasta que una política óptima a sido encontrada.
 
+**Batch & Online Learning**: Cuando el sistema puede o no aprender incrementalmente a partir de un flujo de datos entrantes.
+
+**Batch**: El sistema es incapaz de aprender incrementalmente, es decir, se entrena utilizando toda la data. Si quieres que aprenda de nuevos datos, es necesario entrenar nuevamente utilizando la data nueva y la antigua. Debemos recordar que entrenar con todo el dataset puede ser costoso en recursos *(CPU, memoria, disco, I/O, network I*O, etc).* 
+
+**Online**: El sistema es capaz de aprender incrementalmente, ya sea por instancias secuenciales de agregación de datos o en grupos pequeños **mini-batches**. En este sistema, un modelo es entrenado y lanzado en producción, pero seguirá aprendiendo de los nuevos datos que entren al modelo. Debemos recordar que este aprendizaje no es *en vivo*, sino que es incremental, es decir, el aprendizaje de todas formas es offline. También es importante considerar el parámetro con el que el sistema se adapta a los cambios en los datos llamado **learning rate**. Alto learning rate, tenderá a olvidar la data antigua. Bajo learning rate, aprenderá lento, pero será menos sensitivo al ruido en la nueva data u outliers. Si ves un problema en los resultados, siempre es util chequear la calidad del imput.
+
+Voy en página 47
+
+
