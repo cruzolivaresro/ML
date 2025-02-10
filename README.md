@@ -104,20 +104,20 @@ Algoritmos relacionados al aprendizaje no supervisado:
     
   -**Anomaly detection and novelty detection**
   
-    -*One-class SVM*
-    -*Isolation forest*
+    One-class SVM
+    Isolation forest
     
   -**Visualization and Dimensionality reduction**
   
-    -*Principal Component Analysis (PCA)*
-    -*Kernel PCA*
-    -*Locally Linear Embedding (LLE)*
-    -*t-Distributed Stochastic Neighbor Embedding (t-SNE)*
+    Principal Component Analysis (PCA)
+    Kernel PCA
+    Locally Linear Embedding (LLE)
+    t-Distributed Stochastic Neighbor Embedding (t-SNE)
     
   -**Association rule learning**
   
-    -*Apriori*
-    -*Eclat*
+    Apriori
+    Eclat
 
     
 
