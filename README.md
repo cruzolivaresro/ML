@@ -61,6 +61,7 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
   - Para obtener conocimiento de problemas complejos y grandes cantidades de datos.
 
 *Ejemplos de aplicación:*
+
   -**Clasificador de imágenes (CNN)**: Analizar imagenes de productos en una linea de producción para clasificarlos automáticamente.
   -**Segmentación semántica (CNN)**: Detector de tumores en scaneos cerebrales, cada pixel de la imagen es clasificado.  
   -**Procesamiento de lenguaje natural (RNN, CNN, Transformers)**: Clasificador automático de nuevos artículos o clasificador de comentarios ofensivos.  
@@ -79,3 +80,19 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
   - **(online learning v/s batch learning)**: Si es que pueden o no aprender incrementalmente en el camino.
   - **(instance-based learning v/s model-based learning)**: Cuando se busca comparar nuevos datos con datos conocidos *o* busca detectar patrones en el set de entrenamiento y construir modelos predictivos.
   - Podemos mezclar estos tipos, por ejemplo, un filtro spam que pueda aprender en el camino usando una red neuronal profunda basado en modelo usando samples de spam o ham. *Online, model-based, Supervised*
+
+**Supervisado**:
+El set de entrenamiento contiene las soluciones esperadas **(labels)**. Un ejemplo clásico es clasificación de spam/ham. Otro ejemplo es predecir el valor de un objetivo como el precio de un auto dado un set de cualidades llamados **predictores**.
+
+Algoritmos relacionados al aprendizaje supervisado:
+
+  - **K-nearest Neighbors**
+  - **Linear Regression**
+  - **Logistic Regression**
+  - **Support vector machines**
+  - **Decision Tree and Random Forests**
+  - **Neural Networks**
+
+**NO Supervisado**:
+
+
