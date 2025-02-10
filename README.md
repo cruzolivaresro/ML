@@ -98,9 +98,9 @@ Algoritmos relacionados al aprendizaje no supervisado:
 
   -**Clustering**
   
-    -*K-Means*
-    -*DBSCAN*
-    -*Hierarchical Cluster Analysis (HCA)*
+    K-Means
+    DBSCAN
+    Hierarchical Cluster Analysis (HCA)
     
   -**Anomaly detection and novelty detection**
   
