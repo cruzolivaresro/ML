@@ -85,4 +85,8 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
   
   -**Aprendizaje reforzado**: Hacer un bot inteligente para juegos. Modelo en donde el agente escoge maximizar las recompensas a través del tiempo dado un ambiente específico. **AlphaGo**
 
-  
+*Tipos de Machine Learning*:
+  - **(Supervised, Unsupervised, Semisupervised, RL)**: Si es que están o no siendo entrenados con supervisión humana.
+  - **(online learning v/s batch learning)**: Si es que pueden o no aprender incrementalmente en el camino.
+  - **(instance-based learning v/s model-based learning)**: Cuando se busca comparar nuevos datos con datos conocidos *o* busca detectar patrones en el set de entrenamiento y construir modelos predictivos.
+  - Podemos mezclar estos tipos, por ejemplo, un filtro spam que pueda aprender en el camino usando una red neuronal profunda basado en modelo usando samples de spam o ham. *Online, model-based, Supervised*
