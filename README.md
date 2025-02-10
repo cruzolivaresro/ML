@@ -81,8 +81,7 @@ Un valor de **Accuracy** cercano a 1 indica un alto desempeño del clasificador.
   - **(instance-based learning v/s model-based learning)**: Cuando se busca comparar nuevos datos con datos conocidos *o* busca detectar patrones en el set de entrenamiento y construir modelos predictivos.
   - Podemos mezclar estos tipos, por ejemplo, un filtro spam que pueda aprender en el camino usando una red neuronal profunda basado en modelo usando samples de spam o ham. *Online, model-based, Supervised*
 
-**Supervisado**:
-El set de entrenamiento contiene las soluciones esperadas **(labels)**. Un ejemplo clásico es clasificación de spam/ham. Otro ejemplo es predecir el valor de un objetivo como el precio de un auto dado un set de cualidades llamados **predictores**.
+**Supervisado**: El set de entrenamiento contiene las soluciones esperadas **(labels)**. Un ejemplo clásico es clasificación de spam/ham. Otro ejemplo es predecir el valor de un objetivo como el precio de un auto dado un set de cualidades llamados **predictores**.
 
 Algoritmos relacionados al aprendizaje supervisado:
 
@@ -93,6 +92,25 @@ Algoritmos relacionados al aprendizaje supervisado:
   - **Decision Tree and Random Forests**
   - **Neural Networks**
 
-**NO Supervisado**:
+**NO Supervisado**: El set de entrenamiento no contiene labels, por lo que aprende sin profesor.
 
+Algoritmos relacionados al aprendizaje no supervisado:
+
+  -**Clustering**
+    -*K-Means*
+    -*DBSCAN*
+    -*Hierarchical Cluster Analysis (HCA)*
+  -**Anomaly detection and novelty detection**
+    -*One-class SVM*
+    -*Isolation forest*
+  -**Visualization and Dimensionality reduction**
+    -*Principal Component Analysis (PCA)*
+    -*Kernel PCA*
+    -*Locally Linear Embedding (LLE)*
+    -*t-Distributed Stochastic Neighbor Embedding (t-SNE)*
+  -**Association rule learning**
+    -*Apriori*
+    -*Eclat*
+
+    
 
