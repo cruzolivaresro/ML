@@ -227,13 +227,67 @@ En lugar de usar el test set para ajustar el modelo, divides el conjunto de dato
 
 1. Training Set (conjunto de entrenamiento): Se usa para entrenar el modelo.
   
-2. Validation Set (conjunto de validación o dev set): Se reserva una parte del training set (por ejemplo, el 20-30%) para evaluar diferentes modelos y ajustar los hiperparámetros. Permite comparar el rendimiento de distintos modelos sin afectar el test set.
+2. Validation Set (conjunto de validación o dev set): Se reserva una parte del training set (por ejemplo, el 20-30%) para evaluar diferentes modelos y ajustar los hiperparámetros. Permite comparar el rendimiento de distintos modelos sin afectar el test set. Si es muy pequeño, entonces sus evaluaciones seran imprecisas. Si es muy grande, training set será muy pequeño.
 
 3. Test Set (conjunto de prueba): Se usa solo al final, después de elegir el mejor modelo, para obtener una estimación imparcial del error de generalización.
 
-**Pasos**:
+*Pasos*:
+
   -Dividir datos en entrenamiento y validacion.
+  
   -Entrenar varios modelos con diferentes hiperparametros en el training set (sin validacion).
+  
   -Evaluo modelos con validation set.
+  
   -Reentreno el modelo selecionado usando el conjunto de entrenamiento completo (incluyendo validacion).
+  
   -Prueba el modelo en set test para obtener una vision realista sobre el error de generalización.
+
+**EJ**: Evaluación final con el Test Set, probamos este modelo en los 100 estudiantes que nunca ha visto (test set) para medir su verdadera precisión.
+
+🔹 Si la precisión en el test set es similar a la del validation set, el modelo generaliza bien.
+
+🔹 Si la precisión baja mucho, es posible que el modelo haya memorizado los datos de entrenamiento y necesite ajustes.
+
+***
+
+**Cross-validation**: Si usamos solo un conjunto de validación (como en holdout validation), podríamos tener suerte o mala suerte con la división de los datos.
+
+*Pasos con K-Fold-Cross-Validation K=5*: **la idea es que cada parte se use como conjunto de validación una vez, mientras las otras se usan para entrenar.**
+
+  -Dividimos los datos en 5 partes iguales.
+  -Entrenamos el modelo con 4 partes y lo probamos en la restante.
+  -Repetimos esto 5 veces, utilizando una parte distinta para probar cada ronda. (Entrenar y validar en cada iteración. Registrar métricas.)
+  -Promediamos los resultados de las 5 pruebas para obtener una mejor estimación del rendimiento real del modelo.
+
+**La validación cruzada repetida nos da una mejor medida del rendimiento del modelo al probarlo en muchos conjuntos de validación diferentes, pero a cambio aumenta mucho el tiempo de entrenamiento.**
+
+**Por lo tanto, iteras por cada parte, y las restantes las utilizas de entrenamiento.**
+
+Supongamos que tenemos 5000 datos en total.
+
+1️⃣ Dividimos los datos inicialmente en:
+
+  -Training Set (4000 datos) → Usado para K-Fold.
+  
+  -Test Set (1000 datos) → Guardado aparte para la evaluación final.
+  
+2️⃣ Aplicamos K-Fold (K=5) en el Training Set (4000 datos)
+
+  -Entrenamos y validamos 5 veces con distintos folds.
+
+  -Calculamos el promedio de precisión.
+
+  -Elegimos el mejor modelo según los resultados de validación.
+  
+3️⃣ Entrenamos el modelo final con los 4000 datos completos
+
+  -Ya no usamos folds.
+  
+  -El objetivo es que el modelo aproveche toda la información posible.
+  
+4️⃣ Evaluamos en el Test Set (1000 datos)
+
+  -Ahora usamos los datos de prueba reales que el modelo nunca ha visto.
+  
+  -Esto nos da la verdadera precisión del modelo en datos nuevos.
