@@ -184,5 +184,19 @@ Regression model)*.
   - Lo entrenas con datos de entrenamiento con la medida especifica.
   - Aplicas el modelo para realizar predicciones con la esperanza de que generalice bien.
 
+***
+**Sampling Bias**: Si tomas una muestra demasiado pequeña de la población, los resultados pueden estar influenciados por el azar y no reflejar realmente las tendencias generales. Aumentar el tamaño de la muestra no garantiza que sea representativa si el método de selección está sesgado.
+
+**Ejemplo**: Si preguntas a solo 5 clientes de Studio Face qué servicio prefieren, podrías obtener respuestas que no reflejan las preferencias del total de clientes.
+
+**Ejemplo**: Si solo encuestas a clientes que visitan el salón los martes, podrías obtener resultados sesgados y no reflejar las preferencias de quienes van otros días.
+
+***
+
+**Overfitting**: cuando un modelo es demasiado complejo en relacion con la cantidad y calidad de los datos de entrenamiento, es decir, el modelo aprende muy bien los detalles y el ruido de los datos de entrenamiento. Esto generaliza mal.
+
+  -*Demasiado complejo*: Demasiados parametros o usa técnicas avanzadas que lo vuelven complejo.
+  -*Poco training set*: Si el conjunto de datos pequeño, entonces el modelo puede memorizar datos en lugar de aprender patrones.
+  -*Datos con mucho ruido*: Errores o valores atípicos, aprenderá de patrones incorrectos.
 
  
