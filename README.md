@@ -291,3 +291,87 @@ Supongamos que tenemos 5000 datos en total.
   -Ahora usamos los datos de prueba reales que el modelo nunca ha visto.
   
   -Esto nos da la verdadera precisión del modelo en datos nuevos.
+
+***
+
+**Debemos darnos la posibilidad de siempre preguntarnos si los datos son representativos**
+
+**En este caso, la regla más importante a recordar es que el conjunto de validación y el conjunto de prueba deben ser lo más representativos posible de los datos que espera utilizar en producción**
+
+**Desajuste de los datos**:
+
+EJ: Debemos asegurarnos de que estos conjuntos contengan solo imágenes tomadas con la app, no imágenes de internet. Esto nos ayudará a medir el rendimiento real del modelo en condiciones reales.
+
+Después de entrenar con imágenes de internet, podríamos notar que el modelo tiene mal desempeño en el validation set **¿Por qué?**:
+
+  -Modelo ha sobreajustado a las imagenes de internet.
+  
+  -Las imagenes de internet no se parecen a las de la app.
+
+**Para esto utilizamos Train-Dev set**
+
+*¿Qué es el Train-Dev Set y cómo ayuda?*
+
+Imagina que quieres entrenar un modelo de Machine Learning que clasifique imágenes de perros y gatos.
+
+1️⃣ Los datos disponibles:
+
+  -Descargas 1,000,000 imágenes de perros y gatos de internet.
+  
+  -Tomas 10,000 imágenes de perros y gatos tomadas con la cámara del celular, que representan las imágenes reales que los usuarios tomarán en la app.
+
+Conjunto        /      Cantidad      /      Origen
+
+Training Set	  /      990,000       /	    Imágenes de internet (se usa para entrenar)
+
+Train-Dev Set	  /      10,000        /      Imágenes de internet (se usa para evaluar si hay overfitting)
+
+Validation Set  /	     5,000         /    	Imágenes tomadas con el celular (se usa para medir el desempeño en datos reales)
+
+Test Set        /      5,000         /      Imágenes tomadas con el celular (se usa solo para la evaluación final)
+
+
+**Train-Dev Set: Es un subconjunto de imágenes de internet que NO se usa para entrenar, solo para evaluar si el modelo ha sobreajustado.**
+
+**Validation Set y Test Set: Son imágenes reales tomadas con celular, ya que representan los datos que el modelo verá en producción.**
+
+
+📌 Entrenas el modelo con el Training Set (990,000 imágenes de internet).
+
+📌 Luego, lo evalúas en el Train-Dev Set (10,000 imágenes de internet que no se usaron en el entrenamiento).
+
+📌 Luego, lo evalúas en el Validation Set (5,000 imágenes reales del celular).
+
+
+Caso 1: El modelo tiene buen desempeño en Train-Dev pero mal en Validación
+
+Conjunto	                            Precisión
+
+Train-Dev Set (imágenes de internet)	90% ✅
+
+Validation Set (imágenes del celular)	60% ❌
+
+**El modelo funciona bien en imágenes de internet, pero mal en imágenes reales. Hay un desajuste de datos (data mismatch).**
+
+
+Caso 2: El modelo tiene mal desempeño en Train-Dev y en Validación
+
+Conjunto	                            Precisión
+
+Train-Dev Set (imágenes de internet)	70% ❌
+
+Validation Set (imágenes del celular)	60% ❌
+
+**El modelo no generaliza bien ni siquiera en imágenes de internet. Está sobreajustando al Training Set.**
+
+
+***
+📌 Una vez que encuentras la mejor versión del modelo, lo reentrenas con todos los datos de internet + datos reales.
+
+📌 Finalmente, lo pruebas en el Test Set (5,000 imágenes reales de celular) para obtener su precisión final.
+
+📌 Train-Dev Set se usa para ver si hay overfitting al entrenamiento.
+
+📌 Si el modelo falla en Train-Dev, hay overfitting.
+
+📌 Si el modelo solo falla en Validación, hay desajuste de datos (data mismatch).
