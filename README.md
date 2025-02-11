@@ -196,7 +196,21 @@ Regression model)*.
 **Overfitting**: cuando un modelo es demasiado complejo en relacion con la cantidad y calidad de los datos de entrenamiento, es decir, el modelo aprende muy bien los detalles y el ruido de los datos de entrenamiento. Esto generaliza mal.
 
   -*Demasiado complejo*: Demasiados parametros o usa técnicas avanzadas que lo vuelven complejo.
+  
   -*Poco training set*: Si el conjunto de datos pequeño, entonces el modelo puede memorizar datos en lugar de aprender patrones.
+  
   -*Datos con mucho ruido*: Errores o valores atípicos, aprenderá de patrones incorrectos.
 
- 
+**Regularización**: Hacer modelos simples y reducir el riesgo de sobreajuste.
+
+**Grados de libertad en estadistica**: indica cuantos valores pueden variar libremente en un conjunto de datos despues de aplicar restricciones. Ejemplo: tengo 5 variables que en promedio resulta 10. Puedo mover todas las variables, pero me restringo a que la ultima variable será constante. Por lo tanto, los grados de libertad son 4, debido a que la ultima variable está restringida a tener valores.
+
+**Grados de libertad en ML**: indica cuantos parametros del modelo pueden ajustarse libremente para mejorar el ajuste de los datos. EJ: RL simple, hay 2 parametros ajustables.
+
+*En ambos casos, los grados de libertad representan la cantidad de valores o parámetros que pueden cambiar libremente:*
+
+  -En estadística inferencial, se usan para calcular pruebas como t-student, Chi-cuadrado o ANOVA.
+  
+  -En machine learning, se usan para describir la flexibilidad del modelo y su capacidad de ajustarse a los datos.
+
+
