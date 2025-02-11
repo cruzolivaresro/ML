@@ -213,4 +213,27 @@ Regression model)*.
   
   -En machine learning, se usan para describir la flexibilidad del modelo y su capacidad de ajustarse a los datos.
 
+***
 
+**Debemos evaluar y afinar modelo si es necesario para asegurar mejores predicciones**
+
+Si el error de entrenamiento es bajo, pero la generalización de errores es alta, significa que el modelo esta sobreajustando los datos de entrenamiento.
+
+**Sobreajuste al set test** o **data lakeable (fuga de datos) del set test**: Se sobreajusta el modelo para el conjunto test especifico. En un flujo de trabajo adecuado, el conjunto de prueba solo debe usarse una vez, al final del proceso, para evaluar el modelo final. Sin embargo, si mides el error en el test set varias veces y ajustas el modelo basándote en estos resultados, el modelo comienza a aprender las características específicas del test set, en lugar de aprender una representación general de los datos.
+
+**Holdout validation**: se reserva una parte del conjunto de entrenamiento para evaluar varios modelos candidatos y seleccionar el mejor. El conjunto será el **validation set**.
+
+En lugar de usar el test set para ajustar el modelo, divides el conjunto de datos en tres partes:
+
+1. Training Set (conjunto de entrenamiento): Se usa para entrenar el modelo.
+  
+2. Validation Set (conjunto de validación o dev set): Se reserva una parte del training set (por ejemplo, el 20-30%) para evaluar diferentes modelos y ajustar los hiperparámetros. Permite comparar el rendimiento de distintos modelos sin afectar el test set.
+
+3. Test Set (conjunto de prueba): Se usa solo al final, después de elegir el mejor modelo, para obtener una estimación imparcial del error de generalización.
+
+**Pasos**:
+  -Dividir datos en entrenamiento y validacion.
+  -Entrenar varios modelos con diferentes hiperparametros en el training set (sin validacion).
+  -Evaluo modelos con validation set.
+  -Reentreno el modelo selecionado usando el conjunto de entrenamiento completo (incluyendo validacion).
+  -Prueba el modelo en set test para obtener una vision realista sobre el error de generalización.
